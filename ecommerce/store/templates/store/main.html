@@ -33,7 +33,7 @@
                 <a href="#" class="btn btn-warning">Login</a>
 
                 <a href="{% url 'cart' %}">
-                    <img id="cart-icon" src="{% static '/images/cart.png' %}">
+                    <img id="cart-icon" src="/static/images/cart.png" alt="cart icon">
                 </a>
                 <p id="cart-total">0</p>
 
@@ -61,6 +61,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
 </body>
 
 </html>
