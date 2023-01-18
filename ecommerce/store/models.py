@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Customer(models.Model):
-    """docstring for Customer."""
+    '''This class represents a customer in the system'''
     user = models.OneToOneField(User, on_delete=models.CASCADE ,null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
@@ -13,6 +13,7 @@ class Customer(models.Model):
         return self.name
 
 class Product(models.Model):
+    '''This class represents a product in the system'''
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     digital = models.BooleanField(default=False, null=True, blank=False)
@@ -22,6 +23,7 @@ class Product(models.Model):
         return self.name
 
 class Order(models.Model):
+    '''This class represents an order in the system'''
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     date_orderd = models.DateTimeField(auto_now_add=True)
     complete = models.BooleanField(default=False, null=True, blank=False)
@@ -31,12 +33,14 @@ class Order(models.Model):
         return str(self.name)
 
 class OrderItem(models.Model):
+    '''This class represents an item in an order in the system'''
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
 class ShippingAddress(models.Model):
+    '''This class represents a shipping address for an order in the system'''
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     address = models.CharField(max_length=200, null=True)
