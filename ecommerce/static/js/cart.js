@@ -16,7 +16,7 @@ for (i = 0; i < updateBtns.length; i++) {
 }
 
 function updateUserOrder(productId, action) {
-    var url = 'update_item/'
+    var url = window.location.origin + '/update_item/'
     console.log('URL:', url)
 
     fetch(url, {
