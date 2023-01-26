@@ -26,9 +26,9 @@ def cart(request):
     '''This function returns the cart page'''
 
     data = cartData(request)
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
+    cartItems = data.get('cartItems', 0)
+    order = data.get('order', None)
+    items = data.get('items', [])
 
     context = {
         'items': items,
