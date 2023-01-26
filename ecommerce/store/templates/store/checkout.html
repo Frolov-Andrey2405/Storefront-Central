@@ -82,6 +82,15 @@
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
 
+        style: {
+            color: 'gold',
+            shape: 'rect',
+            size: 'responsive',
+            label: 'paypal',
+            tagline: 'false',
+            fundingicons: 'true'
+        },
+
         // Set up the transaction
         createOrder: function (data, actions) {
             return actions.order.create({
