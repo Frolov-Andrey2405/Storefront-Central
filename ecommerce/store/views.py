@@ -5,8 +5,9 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
-from .utils import cookieCart, cartData, questOrder
+from .utils import cartData, questOrder
 from django.shortcuts import render
+from django import template
 
 # Create your views here.
 
@@ -36,6 +37,16 @@ def cart(request):
         'cartItems': cartItems
         }
     return render(request, 'store/cart.html', context)
+
+def product_view(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, 'store/product_view.html', {'product': product})
+
+register = template.Library()
+
+@register.filter
+def check_product_info(product):
+    return all(value for key, value in product.__dict__.items() if not key.startswith('_'))
 
 def checkout(request):
     '''This function returns the checkout page'''

@@ -18,6 +18,21 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     digital = models.BooleanField(default=False, null=True, blank=False)
     image_url = models.TextField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    availability = models.BooleanField(default=True, null=True, blank=False)
+    rating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
+    category = models.CharField(max_length=200, null=True, blank=True)
+    brand = models.CharField(max_length=200, null=True, blank=True)
+    sku = models.CharField(max_length=200, null=True, blank=True)
+    width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    height = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    depth = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    weight = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    warranty = models.TextField(null=True, blank=True)
+    shipping_fees = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
+    estimated_delivery_time = models.CharField(max_length=200, null=True, blank=True)
+    return_policy = models.TextField(null=True, blank=True)
+    step_by_step_description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

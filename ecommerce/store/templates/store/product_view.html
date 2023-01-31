@@ -1,0 +1,94 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="a-container">
+    <a class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
+    <br>
+    <br>
+    <div class="a-section a-text-center" style="display:flex;">
+        <div class="a-section a-spacing-none" style="width:50%;">
+            <img class="a-dynamic-image" src="{{ product.image_url }}" alt="{{ product.name }}"
+                style="max-height:500px;max-width:500px;float:left;margin-right:20px">
+        </div>
+        <div style="flex: 2;">
+            <!-- Product information starts here -->
+            <h1 class="a-size-large a-spacing-none">{{ product.name }}</h1>
+            <span class="a-size-medium a-color-price">${{ product.price|floatformat:2 }}</span>
+            <br><br>
+            <button 
+            data-product={{product.id}} 
+            data-action='add' 
+            class="a-button-primary add-btn update-cart">Add to Cart</button>
+
+            {% if product.description %}
+            <hr>
+            <h4>Product Description</h4>
+            <p>{{ product.description }}</p>
+            {% endif %}
+
+            {% if product.step_by_step_description %}
+            <h4>Step by Step Description</h4>
+            <p>{{ product.step_by_step_description }}</p>
+            {% endif %}
+
+            {% if product.category %}
+            <hr>
+            <h4>Category</h4>
+            <p>{{ product.category }}</p>
+            {% endif %}
+
+            {% if product.brand %}
+            <h4>Brand</h4>
+            <p>{{ product.brand }}</p>
+            {% endif %}
+
+            {% if product.sku %}
+            <h4>SKU</h4>
+            <p>{{ product.sku }}</p>
+            {% endif %}
+
+            {% if product.width or product.height or product.depth %}
+            <h4>Dimensions</h4>
+            {% if product.width %}
+            <p>Width: {{ product.width }} inches</p>
+            {% endif %}
+
+            {% if product.height %}
+            <p>Height: {{ product.height }} inches</p>
+            {% endif %}
+
+            {% if product.depth %}
+            <p>Depth: {{ product.depth }} inches</p>
+            {% endif %}
+
+            {% if product.weight %}
+            <p>Weight: {{ product.weight }} pounds</p>
+            {% endif %}
+            {% endif %}
+
+            {% if product.warranty %}
+            <h4>Warranty</h4>
+            <p>{{ product.warranty }}</p>
+            {% endif %}
+
+            {% if product.shipping_fees %}
+            <h4>Shipping Fees</h4>
+            <p>${{ product.shipping_fees|floatformat:2 }}</p>
+            {% endif %}
+
+            {% if product.estimated_delivery_time %}
+            <h4>Estimated delivery time</h4>
+            <p>{{ product.estimated_delivery_time }}</p>
+            {% endif %}
+
+
+            {% if product.return_policy %}
+            <h4>Return Policy</h4>
+            <p>{{ product.return_policy }}</p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
