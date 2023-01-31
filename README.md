@@ -16,7 +16,7 @@ The PayPal API was integrated into the project to provide secure payment process
 
 JQuery and Popper.js were used to provide dynamic and interactive functionality to the platform. These libraries provide a set of tools for working with HTML and CSS that make it easier to create dynamic web applications. 💻🎨
 
-#### Technologies and Libraries:
+#### Technologies💻 and Libraries📚:
 
 - **[Python](https://docs.python.org/3/)**
 
@@ -40,7 +40,7 @@ JQuery and Popper.js were used to provide dynamic and interactive functionality 
 
 The Storefront Central project is a well-designed and well-structured web application that provides users with a convenient and secure platform for purchasing products and services online 🛍️💳💻. The use of Python, Django, and various libraries and technologies has made it possible to create a dynamic and responsive platform that is easy to use and navigate📱.
 
-#### Project Launch:
+#### Project Launch🚀💻:
 
 The launch of the Storefront Central project involves several steps that must be followed to set up and run the application. Here are the steps in detail:
 
