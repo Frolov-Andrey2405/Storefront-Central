@@ -8,10 +8,8 @@
         <div class="box-element product">
             <h6><strong>{{product.name}}</strong></h6>
             <hr>
-            <button 
-            data-product={{product.id}}
-            data-action='add'
-            class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+            <button data-product={{product.id}} data-action='add'
+                class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
             <a class="btn btn-outline-success" href="{% url 'product_view' product.id %}">View</a>
             <h4 class="price" style="float: right;">
                 <strong>${{product.price|floatformat:2}}</strong>
@@ -22,3 +20,22 @@
 </div>
 
 {% endblock content %}
+
+<!-- 
+**Overview**
+This template is a Django template that extends the main.html template. 
+It displays a list of products and their information, such as 
+the product name, image, price, and links to add the product 
+to a cart or view the product details.
+
+**Functionality**
+The template loops through a list of products passed as 
+the 'products' argument and displays each product in a grid 
+format using Bootstrap's 'col-lg-4' class. For each product, 
+the template displays the product name, image, price, and two buttons: 
+one to add the product to a cart and another to view the product details. 
+The add to cart button has data attributes 'data-product' and 'data-action' that 
+store the product id and the action to be taken, respectively. 
+The view button links to the product view page with the product id 
+passed as an argument to the 'product_view' URL.
+-->

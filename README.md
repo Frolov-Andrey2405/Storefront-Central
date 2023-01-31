@@ -1,28 +1,53 @@
 # 🛍️ Storefront-Central
-Storefront Central is an online platform designed to bring together businesses and customers in a convenient location 💼🧑‍💼. The platform is built using various technologies, each playing a crucial role in the functioning of the platform 💻.
 
-## Detailed Description 🔍💻
-Storefront Central is an online platform designed to bring together businesses and customers in one convenient and accessible location 💼👥. This platform provides businesses with the ability to showcase their products and services 📈, while customers can browse and purchase items directly from the platform 🛒. The PayPal payment API is used to handle the payment processing, with the options being initially hidden and revealed when a customer clicks the "Make payment" button. The PayPal API is included in the code with a client ID and currency information. Sets up the transaction, including the amount to be charged which is obtained from the Django order model. Also includes the logic to capture the order information after the customer approves the payment, which is then logged in the browser console.
+The Storefront Central is an online store built using the Django framework. It provides a platform for users to purchase products and services in a secure and efficient manner. The project focuses on providing a clean, user-friendly interface that is easy to navigate and use.
 
-The project is built using Python 🐍, with the Django framework providing the backbone for the platform 💪. Javascript 💻, CSS 🎨, HTML 🖥️, and Bootstrap have been utilized to provide a user-friendly and visually appealing interface 🙌. SQLite 🗄️ is used for database management and storage, while json 🔗 is used for data exchange between the front-end and back-end 💻🗄️. The technologies used are commonly used in web development and are known for their reliability and efficiency 💯. The use of Django as the framework provides a solid backbone for the platform, ensuring stability and security 🔒.
+### Idea and Essence of the Project💡
 
-The platform is divided into two main components - the business-facing side 💼 and the customer-facing side 👥. On the business-facing side, businesses can create and manage their profiles 📈, showcasing their products and services with images and descriptions 💡. They also have the ability to manage their orders 📊 and fulfill them directly from the platform 🛍️. On the customer-facing side, customers can browse products and services from various businesses 🛍️, read product descriptions 📖, and make purchases directly through the platform 💳. They also have the ability to view and manage their order history 📋, track their deliveries 🚚, and communicate directly with the businesses they purchase from 💬.
+The main objective of the Storefront Central project is to create a platform where users can purchase products and services online in a hassle-free manner. The project aims to provide a user-friendly interface that is easy to navigate and use. The platform also emphasizes on security and efficiency to ensure that transactions are carried out securely and quickly. 🛍️🔒💳
 
-The project is built with scalability and security in mind 🔒💪. It uses the latest security practices and encryption techniques to ensure the safety and privacy of customer data 🔒. The platform is also designed to be scalable and flexible 💪, making it suitable for businesses of any size and in any industry 💼🚀.
+## Detailed Description 📝
 
-#### Technologies and Libraries
-- **[Python](https://docs.python.org/3/)**: used as the back-end language for the platform and is responsible for managing the business and customer interactions, as well as handling the data storage and retrieval.
+The Storefront Central project was built using Python and the Django framework. Python is a high-level programming language that is widely used for web development and scientific computing. The Django framework provides a set of tools and functions that make it easier to build complex web applications. 🐍💻
 
-- **[Django](https://docs.djangoproject.com/en/3.2/)**: provides the framework and structure for the platform, allowing for easy and efficient development of the platform's features and functionality.
+JavaScript, CSS, and HTML were used to provide the front-end functionality of the platform. The Bootstrap library was used to create a responsive design that adapts to different screen sizes and devices. 💻🖥️📱
 
-- **[JavaScript (JS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**: is used to provide a dynamic and interactive front-end experience for users, enabling them to easily browse and purchase products and services.
+The PayPal API was integrated into the project to provide secure payment processing. JSON was used to exchange data between the front-end and back-end components. SQLite was used as the database for the project, which is a lightweight and efficient database management system. 💳🔄💾
 
-- **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**: used to create the visual style and design of the platform, making it visually appealing and user-friendly.
+JQuery and Popper.js were used to provide dynamic and interactive functionality to the platform. These libraries provide a set of tools for working with HTML and CSS that make it easier to create dynamic web applications. 💻🎨
 
-- **[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)**: provides the basic structure and layout of the platform, making it easily accessible and navigable for users.
+#### Technologies and Libraries:
 
-- **[Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)**: used to ensure that the platform is easily viewable on any device, providing a consistent and seamless user experience.
+- **[Python](https://docs.python.org/3/)**
 
-- **[JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)**: used to transfer data between the front-end and back-end, allowing for real-time updates and data synchronization.
+- **[Django](https://docs.djangoproject.com/en/3.2/)**
 
-- **[SQLite](https://www.sqlite.org/docs.html)**: used to manage and store data for the platform, ensuring that customer and business data is easily accessible and secure.
+- **[JavaScript (JS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+
+- **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**
+
+- **[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)**
+
+- **[Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)**
+
+- **[JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)**
+
+- **[SQLite](https://www.sqlite.org/docs.html)**
+
+- **[JQuery](https://api.jquery.com/)**
+
+- **[Popper.js](https://popper.js.org/docs/v2/)**
+
+The Storefront Central project is a well-designed and well-structured web application that provides users with a convenient and secure platform for purchasing products and services online 🛍️💳💻. The use of Python, Django, and various libraries and technologies has made it possible to create a dynamic and responsive platform that is easy to use and navigate📱.
+
+#### Project Launch:
+
+The launch of the Storefront Central project involves several steps that must be followed to set up and run the application. Here are the steps in detail:
+
+`venv/scripts/activate`: the first step in launching the project is to activate the virtual environment. The virtual environment is used to isolate the dependencies and packages used in the project from the global environment. 
+To activate the virtual environment, you need to run the command `venv/scripts/activate `in the terminal.
+
+`cd ecommerce`: the next step is to change the directory to the project's root folder, which is "ecommerce". 
+To do this, you need to run the command `cd ecommerce` in the terminal.
+
+`python manage.py runserver`: once you have changed the directory to the project's root folder, you can run the command `python manage.py runserver` to start the application. This command launches the development server that is used to run the application. The development server provides an interface for users to access the application and interact with it.

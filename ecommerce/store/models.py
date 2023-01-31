@@ -94,3 +94,42 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return self.address
+
+"""
+**Overview**
+
+This file contains four classes: Customer, Product, Order, OrderItem and 
+ShippingAddress. These classes represent different entities in an e-commerce 
+system and their relationships with each other.
+
+**Functionality**
+
+- Customer
+The Customer class represents a customer in the system. It has fields for the 
+customer's name, email, and a OneToOne relationship with Django's built-in 
+User model.
+
+- Product
+The Product class represents a product in the system. It has fields for 
+product details such as name, price, image URL, description, availability, 
+rating, category, brand, SKU, dimensions, weight, warranty, shipping fees, 
+estimated delivery time, return policy, and a step-by-step description.
+
+- Order
+The Order class represents an order in the system. It has fields for the 
+customer who made the order, the date the order was placed, the completion 
+status of the order, and the transaction ID. It also has properties to return 
+the shipping status, the total amount of the order, and the number of items in 
+the order.
+
+- OrderItem
+The OrderItem class represents an item in an order in the system. It has 
+fields for the product, the order it belongs to, the quantity of the product, 
+and the date it was added to the order. It has a property to return the total 
+amount for this item.
+
+- ShippingAddress
+The ShippingAddress class represents a shipping address for an order in 
+the system. It has fields for the customer, address, city, state, zip code, 
+and a date added field.
+"""

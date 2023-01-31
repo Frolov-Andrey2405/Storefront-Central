@@ -204,3 +204,26 @@
 </script>
 
 {% endblock content %}
+
+<!-- 
+**Overview**
+This is a Django template that represents a checkout page of an e-commerce website. 
+The page displays the form for collecting user and shipping information and 
+the order summary on the right side. The form is implemented using HTML, 
+CSS, and Django template tags. The order summary shows the items and total 
+amount of the order.
+
+**Functionality**
+- The form collects the user information, including name, email, and shipping 
+information such as address, city, state, zip code, and country.
+
+- The order summary displays a list of items in the cart and the total 
+amount of the order.
+
+- The page integrates with the PayPal API to provide a PayPal checkout 
+option for users to make payments. The SDK is loaded from the PayPal 
+server and a script is added to render the PayPal button in the HTML.
+
+- The createOrder and onApprove functions of the PayPal API are implemented 
+to set up the transaction and finalize it upon approval.
+-->

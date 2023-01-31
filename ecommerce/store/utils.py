@@ -98,3 +98,31 @@ def questOrder(request, data):
         )
     
     return customer, order
+
+"""
+**Overview**
+
+This code provides the functionalities of a shopping cart in 
+an e-commerce website. It implements the functionalities of adding items 
+to the cart, retrieving the items in the cart and creating an order for 
+the items in the cart.
+
+**Functionality**
+
+'cookieCart(request)': This function retrieves the items in the cart from 
+the cookies and returns a dictionary containing the total number of items, 
+the total cost of the items, the items in the cart, and a boolean indicating 
+if shipping is required.
+
+'cartData(request)': This function retrieves the items in the cart from either 
+the authenticated user's order or from the cookies if the user is 
+not authenticated. It returns a dictionary containing the total number of 
+items, the total cost of the items, and the items in the cart.
+
+'questOrder(request, data)': This function creates an order for the items in 
+the cart for a guest user. It receives the user's name and email from 
+the data argument, retrieves the items in the cart from the cookies, 
+creates a customer record with the email and name, creates an order for 
+the items, and returns the customer and order information.
+
+"""
