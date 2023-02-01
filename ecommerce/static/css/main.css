@@ -105,3 +105,55 @@ h6 {
 .hidden {
     display: none !important;
 }
+
+/*
+
+*Overview*
+
+The CSS code provided is for styling a web page. 
+It defines the styles for various HTML elements, including body, headings, 
+boxes, images, buttons, forms, and cart items. The styles set the background 
+color, text color, shadows, borders, padding, font size, and other visual 
+aspects of the page elements.
+
+*Functionality*
+
+- The body background color is set to a light shade of grey using HSL color values.
+
+- Headings (h1 to h6) are set to a dark shade of grey using HSL color values.
+
+- The .box-element class sets a box shadow and background color for a box element, 
+with rounded borders and padding.
+
+- The .thumbnail class sets a width and height for an image, along with a box shadow.
+
+- The .product class sets the border radius for product elements.
+
+- The .bg-dark class sets a dark green background color for elements with this class.
+
+- The #cart-icon ID sets the width and display for a cart icon.
+
+- The #cart-total ID sets the display, text alignment, color, background color, 
+width, height, border radius, and font size for the cart total.
+
+- The .col-lg-4, .col-lg-6, .col-lg-8, and .col-lg-12 classes set a margin-top 
+for elements with these classes.
+
+- The .btn class sets the border radius for buttons.
+
+- The .row-image class sets the width for an image.
+
+- The .form-field class sets the width, display, and padding for form fields.
+
+- The .cart-row class sets the display, align-items, padding, margin, and 
+border-bottom for cart row elements.
+
+- The .quantity class sets the display, font weight, and padding for 
+quantity elements.
+
+- The .chg-quantity class sets the width, cursor, display, margin-top, 
+and hover transition for elements with this class.
+
+- The .hidden class sets the display to none for elements with this class.
+
+*/
