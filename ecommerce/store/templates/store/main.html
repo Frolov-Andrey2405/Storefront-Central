@@ -118,11 +118,11 @@ that are common to all pages. The header displays the website name (Ecom), and a
 section is a placeholder for the main content of each page.
 
 **Functionality**
-- Loads static files using the Django template tag '{% load static %}''
+- Loads static files using the Django template tag '% load static %'
 - Sets the user's authentication status in a JavaScript variable user = '{{ request.user }}'
 - Gets the CSRF token from a cookie using the 'getToken' function
 - Gets the content of a cookie with the name 'cart' and parses it into a JavaScript object 'cart'
 - Sets the value of the 'cart' cookie if it doesn't exist
 - Displays the number of items in the cart and provides a link to the cart page in the header
-- Provides a basic layout for the main content of each page using the Django template tag '{% block content %}'
+- Provides a basic layout for the main content of each page using the Django template tag '% block content %'
 -->
